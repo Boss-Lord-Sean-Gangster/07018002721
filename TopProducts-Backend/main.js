@@ -16,7 +16,7 @@ app.get('/categories/:categoryname/products', async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const sort = req.query.sort || 'price';
   const order = req.query.order || 'asc';
-  const company = req.query.company || 'AMZ'; // Example default company
+  const company = req.query.company || 'AMZ'; // Example default company is this 
 
   try {
       const response = await axios.get(`${BASE_URL}/${company}/categories/${categoryName}/products`, {
@@ -28,7 +28,7 @@ app.get('/categories/:categoryname/products', async (req, res) => {
               minPrice: minPrice,
               maxPrice: maxPrice,
               sort: sort,
-              order: order
+              order: order,
           }
       });
 
